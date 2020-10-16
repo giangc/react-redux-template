@@ -4,4 +4,4 @@ The template creates environment for experimenting react redux problem set. Plea
 
 # Description
 
-React redux typescript, functional sample which has one store, one reducer, one selector, action and basic type.
+This contains react, redux and redux devtool
