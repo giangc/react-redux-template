@@ -1,9 +1,23 @@
-import React from 'react'
+import React from "react";
+// import { connect } from "react-redux";
+// import { toggleTodo } from "../redux/actions";
+import { TodoType } from '../todo/todoSlice'
 
-const Todo = () => {
-  return <div>
-
-  </div>
+export type TodoProps = {
+  todo: TodoType
 }
 
-export default Todo
+const Todo: React.FC<TodoProps> = ({ todo }) => (
+  <li className="todo-item" onClick={() => alert('done')}>
+    {todo && todo.complete ? "👌" : "👋"}{" "}
+    <span>
+      {todo.content}
+    </span>
+  </li>
+);
+
+export default Todo;
+// export default connect(
+//   null,
+//   { toggleTodo }
+// )(Todo);

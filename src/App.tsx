@@ -1,28 +1,18 @@
 import React from 'react';
 import './App.css';
-import AddTodo from './components/AddTodo'
-import Todo, { TodoTypes } from './components/Todo'
+import AddTodo from './features/todo/AddTodo'
+import TodoList from './features/todo/TodoList'
+import VisibilityFilters from './features/todo/VisibilityFilters'
+import { Counter } from './features/counter/Counter'
+
 
 function App() {
-  const todo: TodoTypes = {
-    toggleTodo: (id) => {
-      console.log("id: ", id)
-    },
-    todo: {
-      id: 1,
-      content: 'hello',
-      completed: false
-    }
-  }
   return (
     <div className="App">
+      <Counter />
       <AddTodo />
-      <ul>
-        <Todo
-          todo={todo.todo}
-          toggleTodo={todo.toggleTodo}
-        />
-      </ul>
+      <VisibilityFilters />
+      <TodoList />
     </div >
   );
 }
