@@ -1,4 +1,5 @@
+import { RootState } from "."
 
-export const getMyReducerState = (store: any) => {
-  return store.myReducer
+export const selectContent = (store: RootState) => {
+  return store.myReducer.content
 }

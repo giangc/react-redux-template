@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import './App.css'
 import { RootState } from './redux/reducers'
 import { update } from './redux/reducers/actions'
+import { selectContent } from './redux/reducers/mySelector'
 
 class App extends React.Component<React.PropsWithChildren<Props>, State> {
 
@@ -70,7 +71,7 @@ export type StateProps = ReturnType<typeof mapStateToProps>
 
 const mapStateToProps = (state: RootState, ownProps: OwnProps) => {
   return {
-    myReduxContent: state.myReducer.content
+    myReduxContent: selectContent(state)
   }
 }
 
