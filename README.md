@@ -1,1 +1,15 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+> This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+
+The template creates environment for experimenting react redux problem set. Please follow strictly how to use those branches.
+
+# Branching
+
+* Default: contain pretty much everything `git clone main`
+* Blank project with one file App.tsx `git clone stage/blank-project`
+* Project with react-redux and formal store setup `git clone stage/react-redux`
+* Project with setup of reduxjs-toolkit `git clone stage/react-redux-reduxjs-toolkit`
+* Experiment branch on remote on todo list `git checkout experiment/todo-list`
+* Experiment branch on remote on form validation `git checkout experiment/form`
+# Diagram on branching
+
+<image here>
