@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import AddTodo from './features/todo/AddTodo'
-import TodoList from './features/todo/TodoList'
-import VisibilityFilters from './features/todo/VisibilityFilters'
-import { Counter } from './features/counter/Counter'
+import AddTodo from './redux/todo/AddTodo'
+import TodoList from './redux/todo/TodoList'
+import VisibilityFilters from './redux/todo/VisibilityFilters'
+import { Counter } from './redux/counter/Counter'
 
 
 function App() {
