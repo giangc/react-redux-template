@@ -25,8 +25,14 @@ class AddTodo extends React.Component {
     return (
       <div>
         <input
-          onChange={e => this.updateInput(e.target.value)}
+          onChange={event => this.updateInput(event.target.value)}
           value={this.state.input}
+          onKeyDown={event => {
+            if (event.key === 'Enter') {
+              handleAddTodo()
+            }
+          }
+          }
         />
         <button className="add-todo" onClick={handleAddTodo}>
           Add Todo

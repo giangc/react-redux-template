@@ -22,6 +22,11 @@ const initialState: TodoState = {
       id: 2,
       content: "watch tv",
       complete: false
+    },
+    {
+      id: 3,
+      content: "do 100 pushups",
+      complete: true
     }
   ]
 }
@@ -39,14 +44,28 @@ export const todoSlice = createSlice({
         content: content,
         complete: complete
       }]
-
     },
-    removeTodo: state => {
 
+    removeTodo: (state, action: PayloadAction<number>) => {
+      alert("yay! You've just completed the item" + JSON.stringify(action))
+      state.data = state.data.filter(one => one.id !== action.payload)
     },
-    doneTodo: state => {
 
+    doneTodo: (state, action: PayloadAction<number>) => {
+      const updated = state.data.map(each => {
+        if (each.id === action.payload) {
+          alert('removing warn')
+          return {
+            id: each.id,
+            content: each.content,
+            complete: true
+          }
+        }
+        else return each
+      })
+      state.data = [...updated]
     },
+
     updateTodo: state => {
 
     }

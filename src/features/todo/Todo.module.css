@@ -1,0 +1,8 @@
+.todoItems {
+  color: black;
+  font-size: 1rem;
+}
+
+.itemDone {
+  color: green;
+}

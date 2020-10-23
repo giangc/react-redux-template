@@ -7,7 +7,7 @@ const TodoList = () => {
   const todos = useSelector(selectData)
 
   return (
-    <ul className="todo-list">
+    <ul>
       {todos && todos.length
         ? todos.map((todo, index) => {
           return <Todo key={`todo-${todo.id}`} todo={todo} />;

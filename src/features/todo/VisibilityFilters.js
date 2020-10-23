@@ -24,11 +24,4 @@ const VisibilityFilters = () => {
   );
 };
 
-// const mapStateToProps = state => {
-//   return { activeFilter: state.visibilityFilter };
-// };
 export default VisibilityFilters;
-// export default connect(
-//   mapStateToProps,
-//   { setFilter }
-// )(VisibilityFilters);
