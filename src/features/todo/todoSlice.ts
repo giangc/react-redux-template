@@ -74,7 +74,16 @@ export const todoSlice = createSlice({
 
 export const { addTodo, removeTodo, doneTodo, updateTodo } = todoSlice.actions
 
-export const selectData = (state: RootState) => state.todo.data
+export const selectData = (state: RootState) =>
+  state.todo.data
+
+export const selectInProgress = (state: RootState) =>
+  state.todo.data.filter(each =>
+    each.complete === false)
+
+export const selectDone = (state: RootState) =>
+  state.todo.data.filter(each =>
+    each.complete === true)
 
 export const selectNextId = (state: RootState) => state.todo.data[state.todo.data.length - 1].id + 1
 

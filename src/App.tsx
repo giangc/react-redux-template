@@ -1,19 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import AddTodo from './features/todo/AddTodo'
 import TodoList from './features/todo/TodoList'
 import VisibilityFilters from './features/todo/VisibilityFilters'
-import { Counter } from './features/counter/Counter'
 
+const App = () => {
+  const [filterKey, setFilter] = useState('all')
 
-function App() {
   return (
-    <div className="App">
-      <Counter />
-      <AddTodo />
-      <VisibilityFilters />
-      <TodoList />
-    </div >
+    <div className="App" >
+      <section style={{
+        marginLeft: "40%"
+      }}>
+        <h1>TODO LIST</h1>
+        <AddTodo />
+        <VisibilityFilters
+          filter={key => {
+            setFilter(key)
+          }}
+        />
+        <TodoList
+          select={filterKey}
+        />
+
+      </section>
+
+    </div>
   );
 }
 
