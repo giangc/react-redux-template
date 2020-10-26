@@ -11,5 +11,5 @@ The template creates environment for experimenting react redux problem set. Plea
 * Stage: reduxjs and testing `git checkout stage/reduxjs-testing`
 * Stage: css
 * Experiment: todo list `git checkout experiment/todo-list`
-* Experiment: todo list testing `git checkout experiment/todo-list-testing`
+* Experiment: todo list testing: `experiment/todo-list` -> `git checkout experiment/todo-list-testing`
 * Experiment: form validation `git checkout experiment/form`
