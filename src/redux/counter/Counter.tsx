@@ -8,6 +8,7 @@ import {
   incrementAsync
 } from './counterSlice';
 import styles from './Counter.module.css';
+import CounterButton from './styles/CounterButton'
 
 export function Counter() {
   const count = useSelector(selectCount);
@@ -17,13 +18,12 @@ export function Counter() {
   return (
     <div>
       <div className={styles.row}>
-        <button
-          className={styles.button}
+        <CounterButton
           aria-label="Increment value"
           onClick={() => dispatch(increment())}
         >
           +
-        </button>
+        </CounterButton>
         <span className={styles.value}>{count}</span>
         <button
           className={styles.button}
