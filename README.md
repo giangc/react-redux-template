@@ -4,12 +4,13 @@ The template creates environment for experimenting react redux problem set. Plea
 
 # Branching
 
-* Stage: Default: contain pretty much everything `git checkout main`
-* Stage: Blank project with one file App.tsx `git checkout stage/blank-project`
-* Stage: react-redux and formal store setup `git checkout stage/react-redux`
+* Default: `git checkout main`
+* Stage: Blank project with one file App.tsx `stage/main` -> `git checkout stage/blank-project`
+* Stage: react-redux and formal store setup `stage/main` -> `git checkout stage/react-redux`
 * Stage: Project with setup of reduxjs-toolkit `git checkout stage/react-redux-reduxjs-toolkit`
-* Stage: reduxjs and testing `git checkout stage/reduxjs-testing`
+* Stage: reduxjs and testing `stage/main` -> `git checkout stage/reduxjs-testing`
 * Stage: css
+  + `stage/main` -> `git checkout stage/styled-components`
 * Experiment: todo list `git checkout experiment/todo-list`
 * Experiment: todo list testing: `experiment/todo-list` -> `git checkout experiment/todo-list-testing`
 * Experiment: form validation `git checkout experiment/form`
