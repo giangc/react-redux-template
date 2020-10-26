@@ -8,8 +8,8 @@ The template creates environment for experimenting react redux problem set. Plea
 * Stage: Blank project with one file App.tsx `git checkout stage/blank-project`
 * Stage: react-redux and formal store setup `git checkout stage/react-redux`
 * Stage: Project with setup of reduxjs-toolkit `git checkout stage/react-redux-reduxjs-toolkit`
-* Stage: reduxjs and testing
+* Stage: reduxjs and testing `git checkout stage/reduxjs-testing`
 * Stage: css
 * Experiment: todo list `git checkout experiment/todo-list`
-* Experiment: todo list testing
+* Experiment: todo list testing `git checkout experiment/todo-list-testing`
 * Experiment: form validation `git checkout experiment/form`
