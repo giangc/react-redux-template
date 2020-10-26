@@ -2,8 +2,4 @@
 
 # todo list
 
-Simple demonstration on redux with todo list, here is the history list to travel to
-
-* 7088e980c9 : complete: adding todo, done todo, remove todo
-* 5f1b076a15: complete: visibility filter list
-* checkout to blank: `git checkout stage/blank-project`
+Simple demonstration on redux with todo list with unit testing

@@ -11,7 +11,7 @@ interface TodoState {
   data: TodoType[]
 }
 
-const initialState: TodoState = {
+export const initialState: TodoState = {
   data: [
     {
       id: 1,
@@ -38,12 +38,15 @@ export const todoSlice = createSlice({
   reducers: {
     addTodo: (state, action: PayloadAction<TodoType>) => {
       const { id, content, complete } = action.payload
+      const ids = state.data.map(each => each.id)
+      if (ids.includes(id) === false) {
+        state.data = [...state.data, {
+          id: id,
+          content: content,
+          complete: complete
+        }]
+      }
 
-      state.data = [...state.data, {
-        id: id,
-        content: content,
-        complete: complete
-      }]
     },
 
     removeTodo: (state, action: PayloadAction<number>) => {
@@ -54,7 +57,7 @@ export const todoSlice = createSlice({
     doneTodo: (state, action: PayloadAction<number>) => {
       const updated = state.data.map(each => {
         if (each.id === action.payload) {
-          alert('removing warn')
+          alert('just complete: ' + each.content)
           return {
             id: each.id,
             content: each.content,
@@ -66,8 +69,24 @@ export const todoSlice = createSlice({
       state.data = [...updated]
     },
 
-    updateTodo: state => {
+    updateTodo: (state, action: PayloadAction<{
+      id: number, update: {
+        content: string, complete: boolean
+      }
+    }>) => {
+      const { payload } = action
+      const updated = state.data.map(each => {
+        if (each.id === payload.id) {
+          return {
+            id: each.id,
+            content: payload.update.content,
+            complete: payload.update.complete
+          }
+        }
+        else return each
+      })
 
+      state.data = [...updated]
     }
   }
 })
