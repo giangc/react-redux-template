@@ -1,35 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { RootState } from '../../app/store'
-
-export type TodoType = {
-  id: number,
-  content: string,
-  complete: boolean
-}
-
-interface TodoState {
-  data: TodoType[]
-}
-
-const initialState: TodoState = {
-  data: [
-    {
-      id: 1,
-      content: "wash dishes",
-      complete: false
-    },
-    {
-      id: 2,
-      content: "watch tv",
-      complete: false
-    },
-    {
-      id: 3,
-      content: "do 100 pushups",
-      complete: true
-    }
-  ]
-}
+import TodoType from './types/TodoType'
+import initialState from './types/intialState'
+import doneTask from './types/doneTask'
+import produce from "immer"
 
 // Slice => actions, reducer
 export const todoSlice = createSlice({
@@ -66,13 +40,22 @@ export const todoSlice = createSlice({
       state.data = [...updated]
     },
 
-    updateTodo: state => {
+    updateTodoThatNeedsValidation: (
+      state,
+      action: PayloadAction<number>) => {
+
+      state = produce(state, draftState => {
+        draftState.data.push(doneTask)
+        draftState.data.map(each => {
+          if (each.id === action.payload) each.complete = true
+        })
+      })
 
     }
   }
 })
 
-export const { addTodo, removeTodo, doneTodo, updateTodo } = todoSlice.actions
+export const { addTodo, removeTodo, doneTodo, updateTodoThatNeedsValidation } = todoSlice.actions
 
 export const selectData = (state: RootState) =>
   state.todo.data

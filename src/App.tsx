@@ -8,10 +8,12 @@ const App = () => {
   const [filterKey, setFilter] = useState('all')
 
   return (
-    <div className="App" >
-      <section style={{
-        marginLeft: "40%"
-      }}>
+    <div
+      className="App" >
+      <section
+        style={{
+          marginLeft: "40%"
+        }}>
         <h1>TODO LIST</h1>
         <AddTodo />
         <VisibilityFilters
