@@ -22,3 +22,7 @@ The template creates environment for experimenting react redux problem set. Plea
 
 * https://medium.com/@jeffbski/where-do-i-put-my-business-logic-in-a-react-redux-application-9253ef91ce1#.y09fsp98t
 
+# Glossary
+
+* side effect: "any kind of asynchronous logic (AJAX calls, timeouts, promises), generate random values (Date.now(), Math.random()), modify variables outside the reducer, or run other code that affects things outside the scope of the reducer function." - [RTK guideline](https://redux.js.org/style-guide/style-guide#reducers-must-not-have-side-effects) 
+
