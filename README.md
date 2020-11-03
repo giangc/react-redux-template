@@ -14,3 +14,11 @@ The template creates environment for experimenting react redux problem set. Plea
 * Experiment: todo list `git checkout experiment/todo-list`
 * Experiment: todo list testing: `experiment/todo-list` -> `git checkout experiment/todo-list-testing`
 * Experiment: form validation `git checkout experiment/form`
+* Experiment: financial pocket `git checkout experiment/financial-pocket`
+
+# Reading list
+
+**About business logic**
+
+* https://medium.com/@jeffbski/where-do-i-put-my-business-logic-in-a-react-redux-application-9253ef91ce1#.y09fsp98t
+
