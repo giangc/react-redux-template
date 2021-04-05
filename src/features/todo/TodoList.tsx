@@ -17,30 +17,33 @@ const TodoList: React.FC<TodoListProps> = ({ select }) => {
       listStyleType: "none",
     }}>
       {
-        select === FILTERS[0] &&
-          todos &&
-          todos.length
+        select === FILTERS[0] && todos && todos.length
           ?
-          todos.map((todo, index) => {
-            return <Todo key={`todo-${todo.id}`} todo={todo} />;
+          todos.map((todo, _index) => {
+            return (<Todo
+              key={`todo-${todo.id}`}
+              todo={todo}
+              typeDone={false}
+            />)
           })
           :
-
-          select === FILTERS[1] &&
-            todos &&
-            todos.length
+          select === FILTERS[1] && inProgress && inProgress.length
             ?
-            inProgress.map((todo, index) => {
-              return <Todo key={`todo-${todo.id}`} todo={todo} />;
+            inProgress.map((inProgressItem, _) => {
+              return <Todo
+                key={`todo-${inProgressItem.id}`}
+                todo={inProgressItem}
+                typeDone={false} />;
             })
             :
 
-            select === FILTERS[2] &&
-              todos &&
-              todos.length
+            select === FILTERS[2] && done && done.length
               ?
-              done.map((todo, index) => {
-                return <Todo key={`todo-${todo.id}`} todo={todo} />;
+              done.map((doneItem, _) => {
+                return <Todo
+                  key={`todo-${doneItem.id}`}
+                  todo={doneItem}
+                  typeDone={true} />;
               })
               :
               "No todos, yay!"
