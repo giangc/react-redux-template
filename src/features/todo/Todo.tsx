@@ -1,8 +1,10 @@
 import React from "react";
 import { TodoType } from '../todo/todoSlice'
 import { useDispatch } from 'react-redux'
-import { doneTodo, removeTodo } from '../todo/todoSlice'
+import { doneTodo } from '../todo/todoSlice'
 import styles from './Todo.module.css';
+import TodoRemoveBtn from './TodoRemoveBtn'
+
 export type TodoProps = {
   todo: TodoType,
   typeDone: boolean
@@ -21,18 +23,7 @@ const Todo: React.FC<TodoProps> = ({ todo, typeDone }) => {
       <span>
         {todo.content}
       </span>
-      {typeDone && typeDone === true ?
-        (<button
-          style={{
-            marginLeft: "25px",
-          }}
-          onClick={(_) => {
-            dispatch(removeTodo(todo.id))
-          }
-          }
-        >
-          Remove
-        </button>) : ""}
+      {typeDone && typeDone === true ? <TodoRemoveBtn todo={todo} /> : ""}
     </li>
   )
 };
