@@ -12,9 +12,12 @@ The template creates environment for experimenting react redux problem set. Plea
 * Stage: css
   + `stage/main` -> `git checkout stage/styled-components`
 * Experiment: todo list `git checkout experiment/todo-list`
+
 * Experiment: todo list testing: `experiment/todo-list` -> `git checkout experiment/todo-list-testing`
 * Experiment: form validation `git checkout experiment/form`
 * Experiment: financial pocket `git checkout experiment/financial-pocket`
+* Experiment: todo list with some immer code, i.e: mutating the states using immer: `git checkout experiment/todo-list__immer`
+* Experiment: immer testing some immer stuff: `git checkout experiment/immer`
 
 # Reading list
 
