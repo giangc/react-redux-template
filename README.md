@@ -37,6 +37,9 @@ The template creates environment for experimenting react redux problem set. Plea
 
 **Fundamental**
 
-* side effect: "any kind of asynchronous logic (AJAX calls, timeouts, promises), generate random values (Date.now(), Math.random()), modify variables outside the reducer, or run other code that affects things outside the scope of the reducer function." - [Redux guideline](https://redux.js.org/style-guide/style-guide#reducers-must-not-have-side-effects).
-* splitting reducer: Act of splitting reducer into parts that only taking care of. For example, todo, visibilityFilters, etc.
+* code splitting: Dynamic import module, which allows client to load module and run on demand
+* rest parameter: Ability to pass as many as params onto the function as you want(same type param of course)
+* freezing: Freeze state, to prevents accidental change
+* side effect: "any kind of asynchronous logic (AJAX calls, timeouts, promises), generate random values (Date.now(), Math.random()), modify variables outside the reducer, or run other code that affects things outside the scope of the reducer function." - Redux guideline.
+splitting reducer: Act of splitting reducer into parts that only taking care of. For example, todo, visibilityFilters, etc.
 * Curried reducers: Concept immer(immutability mutation lib), when you passing a function to a produce. Produce is a API which help to 'produce' immutable state using draftState. Draftstate is a param that you do mutation in it. Draft state info will then be used to produce a new state with change using copy-on-write mechanism
