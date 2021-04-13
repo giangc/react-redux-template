@@ -10,14 +10,11 @@ test('Counter Slice: increment amount', () => {
     value: 0,
   };
   // get the result
-  counterSlice
+  const reducer = counterSlice.reducer
 
-  const result = increment() {
-    type: 'Counter',
-    payload: initialState
-  }
+  const result = reducer(initialState, increment())
 
-  expect(result).toBe<CounterState>({
+  expect(result).toStrictEqual<CounterState>({
     value: 1
   })
 
