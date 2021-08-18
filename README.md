@@ -19,6 +19,9 @@ The template creates environment for experimenting react redux problem set. Plea
 * Experiment: form validation `git checkout experiment/form`
 * Experiment: financial pocket `git checkout experiment/financial-pocket`
 
+* promise01: Exercising promise function from udacity.
+* promise02: 
+
 # Reading list
 
 **About business logic**
