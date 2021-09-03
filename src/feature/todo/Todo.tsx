@@ -1,7 +1,7 @@
 import React from "react";
 // import { connect } from "react-redux";
 // import { toggleTodo } from "../redux/actions";
-import { TodoType } from '../todo/todoSlice'
+import { TodoType } from './todoSlice'
 
 export type TodoProps = {
   todo: TodoType
